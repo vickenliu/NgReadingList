@@ -1,0 +1,15 @@
+
+<div class='book'>
+<div class='left'>
+<img src="<%= book.img_url %>" class='book.img'>
+<span><%= book.rate %>/5</span>
+</div>
+<div class='right'>
+<h2><strong>Name: </strong><%= book.name %></h2>
+<h3>Author: <%= book.author %></h3>
+<p><strong>Bio: </strong><%= book.description %></p>
+<% book.genres.each do |g| %>
+<span class='genre'><%= g.name %></span>
+<% end %>
+</div>
+</div>

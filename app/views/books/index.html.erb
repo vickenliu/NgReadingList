@@ -1,0 +1,48 @@
+<p id="notice"><%= notice %></p>
+
+<h1 id="list-title">Listing Books</h1>
+<%= link_to 'New Book', new_book_path, class: 'add_new', remote: true %>
+<form id='search'>
+  <label>Search:</label>
+  <input type='text' placeholder='Keyword' id='keyword' name='keyword' value='<%= params[:keyword] %>'>
+</form>
+  <div class='new_form'>
+    <%= form_for(Book.new,remote: true) do |f|%>
+    <label>Book Name:</label>
+    <%= f.text_field :name %>
+
+    <label>Author:</label>
+    <%= f.text_field :author %>
+
+    <label>Amazon ISBN:</label>
+    <%= f.text_field :amazon_id %>
+
+    <label>Genres:</label>
+    <%= f.select :genre_ids, @genres.map{|p| [p.name,p.id]} ,{},{multiple: true}%>
+
+
+    <label>Rate of 5:</label>
+    <% [1,2,3,4,5].each do |i| %>
+    <label class="radio_button"><%= i %><%= f.radio_button :rate, i %></label>
+    <% end %>
+    
+    <label>Short Description:</label>
+    <%= f.text_area :description %>
+
+    <%= f.submit %>
+    <% end %>
+  </div>
+<div id='genres'>
+  <h2>Genres</h2>
+  <ul>
+  <% @genres.each do |g| %>
+  <li><%= link_to g.name, books_path(filter: g.name) %></li>
+  <% end %>
+  </ul>
+</div>
+
+<div id='books'>
+<%= render @books %>
+</div>
+
+

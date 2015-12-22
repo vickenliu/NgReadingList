@@ -1,0 +1,129 @@
+// Place all the styles related to the Books controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+div.book{
+	margin-top:20px;
+	clear:both;
+	display:block;
+	.left{
+	padding-top:10px;
+	float:left;
+	text-align:center;
+	margin-right:0px;
+	display: inline-block;
+	width:30%;
+	span{
+	display:block;
+	margin:0px auto;
+	}
+	}
+	.right{
+	margin-left:4%;
+	display: inline-block;
+	width:65%;
+	span{
+	color:white;
+	background-color:#0018A8;
+	}
+	}
+	&:first-child{
+	margin-top:0px;
+	}
+}
+h1#list-title{
+	margin-left:7%;
+	display:inline-block;
+}
+a.add_new{
+	background-color: #e2F7f4;
+	margin-left:30%;
+	text-align:center;
+	display:inline-block;
+	width:130px;
+	height:35px;
+	border:1px solid black;
+	border-radius:8px;
+	text-decoration:none;
+	font-size:1.5em;
+	line-height:35px;
+	&:hover{
+	background-color:#228744;
+	}
+}
+
+div.new_form{
+	display:block;
+	width:80%;
+	form{
+	margin:5px auto;
+	display:none;
+	}
+	margin:10px auto;
+	padding:10px;
+	clear:both;
+	display:block;
+	label{
+	margin-top:5px;
+	font-size:1.5em;
+	font-weight:bold;
+	display:block;
+	}
+	label.radio_button{
+	margin-top:5px;
+	text-align:center;
+	margin-left:5px;
+	display:inline-block;
+	}
+	input{
+	border-radius:5px;
+	width:20%;
+	font-size:1.3em;
+	margin-top:10px;
+	}
+	textarea{
+	margin-top:10px;
+	display:block;
+	width:50%;
+	height:100px;
+	}
+}
+div#genres{
+	h2{
+	margin-left:20px;
+	}
+	text-align:left;
+	margin-top:10px;
+	float:right;
+	display:inline-block;
+	width:25%;
+	ul li{
+	margin:5px auto;
+	list-style: none;
+	a{
+	text-decoration: none;
+	background-color:#0018A8;
+	color:white;
+	}
+	}
+}
+div#books{
+	width:70%;
+	display:inline-block;
+}
+form#search{
+	margin-top:10px;
+	display:block;
+	width:70%;
+	margin-left:7%;
+	label{
+	font-size:1.5em;
+	font-weight:bold;
+	}
+	input{
+	margin-left:10px;
+	font-size:1.3em;
+	width:30%;
+	height:30px;
+	border-radius:5px;
+	}
+}
