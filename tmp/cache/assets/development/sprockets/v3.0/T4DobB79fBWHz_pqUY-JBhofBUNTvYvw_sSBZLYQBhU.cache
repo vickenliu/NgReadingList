@@ -1,0 +1,10 @@
+I"˜(function() {
+  (function() {});
+
+  $('.add_new').click(function(e) {
+    e.preventDefault();
+    return $('#new_book').toggle();
+  });
+
+}).call(this);
+:ET
