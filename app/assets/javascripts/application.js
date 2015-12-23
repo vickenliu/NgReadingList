@@ -18,6 +18,12 @@ $(document).ready(function(){
 $('.add_new').click(function(e){
 	e.preventDefault();
 	$('#new_book').toggle();
+	if($('#new_book').css('display') == 'block' ){
+		$(this).text('Cancel');
+	}else{
+		$(this).text('New Book');
+	}
+	
 });
 
 });
