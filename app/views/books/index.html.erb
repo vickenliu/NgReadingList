@@ -3,7 +3,7 @@
 <h1 id="list-title">Listing Books</h1>
 <%= link_to 'New Book', new_book_path, class: 'add_new', remote: true %>
 <form id='search'>
-  <label>Search:</label>
+  <label for='keyword'>Search:</label>
   <input type='text' placeholder='Keyword' id='keyword' name='keyword' value='<%= params[:keyword] %>'>
 </form>
   <div class='new_form'>

@@ -2,3 +2,4 @@
 *.ru
 *.lock
 *.cache
+log/*.log
